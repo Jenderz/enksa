@@ -1,25 +1,25 @@
-## Features
+## Caracteristicas
 
-### Coding & Deployment
+### Codificación e implementación
 
-- Using firebase `firestore` database with realtime update
-- Single page progressive ecommerce app using VueJs
-- Offline enabled
-- Progressive images with lazy loading
-- All assets(js,css,images) are precached for a faster user experience
-- Modular coding structure
-- Auto deploy to Netlify production server
-- Better and cleaner JavaScript code
-- Simplified installation and configuration
-- Reliable: Load fast and provide offline experience
-- Fast: Respond quickly to user actions
-- Engaging: Feel like a native app on mobile devices
-- Integrated google analytics
+- Uso de la base de datos Firebase `Firestore` con actualización en tiempo real
+- Aplicación de comercio electrónico progresivo de una sola página con VueJs
+- Fuera de línea habilitado
+- Imágenes progresivas con carga lenta
+- Todos los activos (js, css, imágenes) están guardados previamente para una experiencia de usuario más rápida
+- Estructura de codificación modular
+- Implementación automática en el servidor de producción de Netlify
+- Código JavaScript mejor y más limpio
+- Instalación y configuración simplificadas
+- Fiable: cargue rápido y brinde experiencia fuera de línea
+- Rápido: responda rápidamente a las acciones del usuario
+- Involucrar: siéntete como una aplicación nativa en dispositivos móviles
+- Integrado google analytics
 
-### Store Front
+### Frente de tienda
 
-- Checkout using COD
-- Customer Address
-- Responsive store front
-- Dynamic Page Titles
-- Firebase authentication system (Login with google)
+- Pagar usando COD
+- Dirección del cliente
+- Frente de la tienda receptivo
+- Títulos de páginas dinámicas
+- Sistema de autenticación Firebase (iniciar sesión con google)
