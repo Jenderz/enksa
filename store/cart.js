@@ -182,7 +182,7 @@ const mutations = {
     this.$cookies.set('ArialShop_items', state.items)
     state.skuArray = state.items.map(a => a._id)
     if (qty > 0) {
-      let msg = 'Item  to cart'
+      let msg = 'Artículo al carrito'
       this.$toast.success(msg).goAway(2000)
     }
   }
