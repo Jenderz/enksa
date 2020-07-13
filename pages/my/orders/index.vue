@@ -1,7 +1,7 @@
 <template>
   <div>
     <center class="title">
-      <strong class="font">My Order History</strong>
+      <strong class="font">Mi historial de ordenes</strong>
     </center>
     <Loading :active="!orders || !orders[0]" />
     <div
@@ -15,7 +15,7 @@
       <div class="card shadow-lg2">
         <div class="border">
           <div class="border">
-            <h5>ORDER ID: {{ o['.key'] }}</h5>
+            <h5>ID de la orden: {{ o['.key'] }}</h5>
           </div>
 
           <h1>{{ user.name }}</h1>
@@ -25,7 +25,7 @@
             </div>
             <div class="date">
               <h4>
-                Date:
+                Fecha:
                 {{
                   o['createdAt'].toDate().toLocaleDateString('en-GB', {
                     day: 'numeric',
@@ -56,14 +56,14 @@
         </div>
         <div class="add_date_align">
           <div>
-            <h6>Order Status: {{ o.status }}</h6>
+            <h6>Estado de la orden: {{ o.status }}</h6>
           </div>
           <div>
-            <h3>Total: ₹{{ o.amount.total }}</h3>
+            <h3>Total: ${{ o.amount.total }}</h3>
           </div>
         </div>
         <router-link to="">
-          <p>Need Help?</p>
+          <p>¿Necesitas ayuda?</p>
         </router-link>
       </div>
     </div>

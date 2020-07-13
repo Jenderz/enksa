@@ -2,15 +2,15 @@
   <div>
     <div class="head">
       <center class="title">
-        <strong>My Cart</strong>
+        <strong>Mi carrito</strong>
       </center>
       <center v-if="cartItems.length == 0">
         <div class="container">
           <div>
             <img class="empty-cart" src="/empty-cart.svg" />
           </div>
-          <h2>There's nothing in here</h2>
-          <h5>You have not added any items to your cart yet.</h5>
+          <h2>No hay nada aqui</h2>
+          <h5>Todavía no ha agregado ningún artículo a su carrito.</h5>
           <div class="footer">
             <a>
               <div class="cart-total footer">
@@ -23,7 +23,7 @@
                             <div class="align_pickup">
                               <div class="back_btn"></div>
                               <img src="/backarrow.svg" />
-                              <div><span>Back to Menu</span></div>
+                              <div><span>Regresar al menú</span></div>
                             </div>
                           </button>
                         </div>
@@ -47,7 +47,7 @@
                 <div class="is-mobile">
                   <div class="align">
                     <div class="amount_align">
-                      <p class="grey">Total Amount</p>
+                      <p class="grey">Cantidad total</p>
                     </div>
                     <div>
                       <h2 class="big">{{ getTotal | currency }}</h2>
@@ -62,15 +62,15 @@
                     >
                       <div class="align_pickup">
                         <span v-if="!user || !user.email">
-                          Login For Delivery
+                          Ingresar para ordenar
                         </span>
-                        <span v-else>Proceed to checkout</span>
+                        <span v-else>Pasar por la caja</span>
                       </div>
                     </button>
                   </div>
                 </div>
                 <div class="is-mobile">
-                  <p class="green">Please allow us 45mins for delivery</p>
+                  <p class="green">Permítanos 45 minutos para la entrega.</p>
                 </div>
                 <div class="cart-total-after"></div>
               </div>

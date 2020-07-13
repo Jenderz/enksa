@@ -4,7 +4,7 @@
 
     <div class="pstn">
       <img src="/truck.svg" />
-      <h4 class="textalgn">Admin Panel / Order History</h4>
+      <h4 class="textalgn">Panel del admin / Historial de ordenes</h4>
       <br />
     </div>
     <div
@@ -16,7 +16,7 @@
     >
       <div class="card shadow">
         <div class="status">
-          <h6>Order Status: {{ o.status }}</h6>
+          <h6>Estado de la orden: {{ o.status }}</h6>
         </div>
         <div class="border">
           <div class="column is-mobile">
@@ -39,7 +39,7 @@
                     class="fntclr"
                     v-bind:class="{ Pending: o.status == 'Pending' }"
                   >
-                    Pending
+                    Pendiente
                   </p>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                     class="fntclr"
                     v-bind:class="{ Shipped: o.status == 'Shipped' }"
                   >
-                    Shipped
+                    Enviada
                   </p>
                 </div>
               </div>
@@ -85,7 +85,7 @@
                     class="fntclr2"
                     v-bind:class="{ Delivered: o.status == 'Delivered' }"
                   >
-                    Delivered
+                    Entregada
                   </p>
                 </div>
               </div>
@@ -108,14 +108,14 @@
                     class="fntclr3"
                     v-bind:class="{ Cancelled: o.status == 'Cancelled' }"
                   >
-                    Cancelled
+                    Cancelada
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="border">
-            <h5>ORDER ID: {{ o['.key'] }}</h5>
+            <h5>ID de orden: {{ o['.key'] }}</h5>
           </div>
           <div class="add_flex_align">
             <div>
@@ -123,7 +123,7 @@
             </div>
             <div class="payment">
               <span class="payment_color">
-                Payment:
+                Metodo de pago:
                 <strong>COD</strong>
               </span>
             </div>
@@ -133,7 +133,7 @@
               <h2>{{ o.address }}</h2>
             </div>
             <div class="date">
-              <h4>Date: **/**/****</h4>
+              <h4>Fecha: **/**/****</h4>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@
         <div class="add_flex_align">
           <div></div>
           <div>
-            <h3>Total: ₹{{ o.amount.total }}</h3>
+            <h3>Total: ${{ o.amount.total }}</h3>
           </div>
         </div>
       </div>

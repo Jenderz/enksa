@@ -28,19 +28,19 @@ export default {
 
 <style lang="css" scoped>
 div#wave .fuchsia {
-  background: rgba(255, 0, 255, 0.5);
+  background: #d35400;
 }
 div#wave .olive {
-  background: rgba(128, 128, 0, 0.5);
+  background: #d35400;
 }
 div#wave .blue {
-  background: rgba(0, 0, 255, 0.5);
+  background: #d35400;
 }
 div#wave .green {
-  background: rgba(0, 128, 0, 0.5);
+  background: #d35400;
 }
 div#wave .red {
-  background: rgba(255, 0, 0, 0.5);
+  background: #d35400;
 }
 div#wave {
   position: fixed;

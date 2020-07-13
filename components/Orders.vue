@@ -30,7 +30,7 @@
                     class="fntclr"
                     v-bind:class="{ Pending: o.status == 'Pending' }"
                   >
-                    Pending
+                    Pendiente
                   </p>
                 </div>
                 <div
@@ -49,7 +49,7 @@
                     class="fntclr"
                     v-bind:class="{ Shipped: o.status == 'Shipped' }"
                   >
-                    Shipped
+                    Enviado
                   </p>
                 </div>
                 <div
@@ -68,7 +68,7 @@
                     class="fntclr2"
                     v-bind:class="{ Delivered: o.status == 'Delivered' }"
                   >
-                    Delivered
+                    Entregada
                   </p>
                 </div>
                 <div
@@ -87,7 +87,7 @@
                     class="fntclr3"
                     v-bind:class="{ Cancelled: o.status == 'Cancelled' }"
                   >
-                    Cancelled
+                    Cancelada
                   </p>
                 </div>
               </div>

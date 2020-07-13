@@ -4,9 +4,9 @@
       <div class="fx">
         <div class="text-md-center">
           <h1>404</h1>
-          <h2 class="my-3 headline ">Sorry, page not found</h2>
+          <h2 class="my-3 headline ">Lo siento, no encuentro esta pagina. =( </h2>
           <div>
-            <button class="button" @click="goHome">Go Home</button>
+            <button class="button" @click="goHome">Ir al inicio</button>
           </div>
         </div>
       </div>
@@ -15,9 +15,9 @@
       <div class="fx">
         <div class="text-md-center">
           <h1>500</h1>
-          <h2 class="my-3 headline ">Sorry, an error occured.</h2>
+          <h2 class="my-3 headline ">Lo siento, he tenido sufrido un error.</h2>
           <div>
-            <button class="button" @click="goHome">Go Home</button>
+            <button class="button" @click="goHome">Ir al inicio</button>
           </div>
         </div>
       </div>
