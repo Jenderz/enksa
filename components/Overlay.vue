@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="loading-page" v-if="closed">
-    <b>Sorry we are closed now.</b>
+    <b>Lo siento, estamos cerrados ahora.</b>
   </div>
 </template>
 <script>
