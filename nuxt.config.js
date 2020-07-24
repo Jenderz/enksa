@@ -12,6 +12,7 @@ module.exports = {
     { src: '~plugins/filters.js' },
     { src: '~plugins/firestore.js' }
   ],
+  
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/component-cache',
@@ -19,7 +20,9 @@ module.exports = {
     '@nuxtjs/toast',
     '@nuxtjs/robots',
     'cookie-universal-nuxt',
+    ['nuxt-buefy', { css: true, materialDesignIcons: false }],
     ['@nuxtjs/google-analytics', { id: ANALYTICS_TRACKING_ID }]
+    
   ],
   toast: {
     theme: 'bubble',
