@@ -20,7 +20,7 @@ module.exports = {
     '@nuxtjs/toast',
     '@nuxtjs/robots',
     'cookie-universal-nuxt',
-    ['nuxt-buefy', { css: true, materialDesignIcons: false }],
+    ['nuxt-buefy', { css: true, materialDesignIcons: true }],
     ['@nuxtjs/google-analytics', { id: ANALYTICS_TRACKING_ID }]
     
   ],
