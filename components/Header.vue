@@ -7,6 +7,9 @@
                     alt="Lightweight UI components for Vue.js based on Bulma"
                 >
         </b-navbar-item>
+        <b-navbar-item v-if="user" @click="go('/my/profile')">
+        {{ user.name }}
+        </b-navbar-item>
         </template>
 
 <template slot="start">
