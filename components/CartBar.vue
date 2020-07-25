@@ -13,9 +13,9 @@
             </template>
             <template slot="brand">
 
-               <b-navbar-item tag="router-link" :to="{ path: '/cart' }" >
+               <b-navbar-item tag="router-link" :to="{ path: '/cart' }">
         
-               <img src="/carticon.svg" /> &nbsp; Ver carrito
+               <img src="/carticon.svg" /> &nbsp; <b> Ver carrito </b>
 
             </b-navbar-item>
 
