@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="is-primary">
+  <b-navbar class="is-info">
     <template slot="brand">
      <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <img
@@ -13,18 +13,21 @@
         </template>
 
 <template slot="start">
-            <b-navbar-item href="#">
-                Home
+            <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                Inicio
             </b-navbar-item>
-            <b-navbar-dropdown label="Info" >
+          
+        </template>
+<template slot="end">
+        <b-navbar-dropdown label="Ubicación" >
                 <b-navbar-item href="#">
-                    About
+                    Maracaibo
                 </b-navbar-item>
                 <b-navbar-item href="#">
-                    Contact
+                    San Francisco
                 </b-navbar-item>
             </b-navbar-dropdown>
-        </template>
+            </template>
 
 
 <template slot="end">

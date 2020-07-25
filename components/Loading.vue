@@ -28,19 +28,19 @@ export default {
 
 <style lang="css" scoped>
 div#wave .fuchsia {
-  background: #d35400;
+  background: fuchsia;
 }
 div#wave .olive {
-  background: #d35400;
+  background: olive;
 }
 div#wave .blue {
-  background: #d35400;
+  background: blue;
 }
 div#wave .green {
-  background: #d35400;
+  background: green;
 }
 div#wave .red {
-  background: #d35400;
+  background: red;
 }
 div#wave {
   position: fixed;

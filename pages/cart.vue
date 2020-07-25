@@ -1,9 +1,18 @@
 <template>
   <div>
     <div class="head">
-      <center class="title">
-        <strong>Mi carrito</strong>
-      </center>
+      <section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Mi carrito
+      </h1>
+      <h2 class="subtitle">
+       "No puedes comprar la felicidad pero puedes comprar cosas y eso está muy cerca."
+      </h2>
+    </div>
+  </div>
+</section>
       <center v-if="cartItems.length == 0">
         <div class="container">
           <div>
@@ -38,47 +47,39 @@
       </center>
       <products v-else :products="cartItems" :showcart="true" />
     </div>
-    <div class="footer">
-      <a v-if="!cartItems.length == 0">
-        <div class="cart-total footer">
-          <div class="container2 ">
-            <div class="card shadow-lg2 w100">
-              <div>
-                <div class="is-mobile">
-                  <div class="align">
-                    <div class="amount_align">
-                      <p class="grey">Cantidad total</p>
-                    </div>
-                    <div>
-                      <h2 class="big">{{ getTotal | currency }}</h2>
-                    </div>
-                  </div>
-                  <div>
-                    <button
-                      class="button"
+<footer
+      class="footer"
+      v-if="!cartItems.length == 0"
+    >
+    <b-navbar class="is-primary" fixed-bottom v-bind:mobile-burger="false">
+      <template slot="brand" >
+            <b-navbar-item>
+              <h2 class="big">Cantidad total {{ getTotal | currency }} </h2>
+            </b-navbar-item>
+            </template>
+            <template slot="brand">
+
+               <b-navbar-item
                       :class="[!loading ? 'primary' : '']"
                       :disabled="loading"
                       @click="goToCheckout"
                     >
                       <div class="align_pickup">
-                        <span v-if="!user || !user.email">
-                          Ingresar para ordenar
-                        </span>
-                        <span v-else>Pasar por la caja</span>
+                        <spam v-if="!user || !user.email">
+                         <b> Ingresa para ordenar </b>
+                        </spam>
+                        <spam v-else> <b>Pasar por la caja</b></spam>
                       </div>
-                    </button>
-                  </div>
-                </div>
-                <div class="is-mobile">
-                  <p class="green">Permítanos 45 minutos para la entrega.</p>
-                </div>
-                <div class="cart-total-after"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
+
+            </b-navbar-item>
+
+            </template>
+
+
+      </b-navbar>
+
+</footer>
+
   </div>
 </template>
 <script>
@@ -136,14 +137,6 @@ img.empty-cart {
   position: relative;
   padding-top: 19px;
 }
-.footer {
-  background: #fff;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
 .back-arrw {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -158,8 +151,8 @@ img.empty-cart {
   justify-content: space-between;
 }
 .primary {
-  background: linear-gradient(87deg, #fb6340 0, #fbb140 100%) !important;
-  border-color: #fb6340;
+  background: #ff3860 !important;
+  border-color: #ff3860;
 }
 .button {
   font-family: Karla, Roboto, sans-serif;
