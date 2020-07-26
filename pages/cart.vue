@@ -66,7 +66,7 @@
                     >
 
                         <spam v-if="!user || !user.email">
-                         <b> Ingresa para ordenar </b>
+                         <b> Ingresa </b>
                         </spam>
                         
                         <spam v-else> 
@@ -75,6 +75,15 @@
                  
 
             </b-navbar-item>
+            <b-modal v-if="!user || !user.email" :active.sync="isModalActive">
+ <div class="card">
+   <div class="card-content">
+     <b-button type="is-primary" expanded :class="[!loading ? '' : '']"
+                      :disabled="loading"
+                      @click="goToCheckout">Ingresa para ordenar</b-button>
+   </div>
+ </div>
+</b-modal>
 
             </template>
 
@@ -92,7 +101,8 @@ export default {
   props: ['products'],
   data() {
     return {
-      loading: false
+      loading: false,
+      isModalActive: true
     }
   },
   components: { Products },
@@ -135,6 +145,10 @@ export default {
 <style scoped>
 img.empty-cart {
   width: 200px;
+}
+.card-image,
+.modal-background {
+  cursor: pointer !important;
 }
 .container {
   position: relative;
