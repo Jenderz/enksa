@@ -60,16 +60,19 @@
             <template slot="brand">
 
                <b-navbar-item
-                      :class="[!loading ? 'primary' : '']"
+                      :class="[!loading ? '' : '']"
                       :disabled="loading"
                       @click="goToCheckout"
                     >
-                      <div>
+
                         <spam v-if="!user || !user.email">
                          <b> Ingresa para ordenar </b>
                         </spam>
-                        <spam v-else> <b>Pasar por la caja</b></spam>
-                      </div>
+                        
+                        <spam v-else> 
+                          <b-icon icon="check"></b-icon>
+                          <b>Ir a la caja</b></spam>
+                 
 
             </b-navbar-item>
 
@@ -151,8 +154,8 @@ img.empty-cart {
   justify-content: space-between;
 }
 .primary {
-  background: #ff3860 !important;
-  border-color: #ff3860;
+  background: #167df0 !important;
+  border-color: #167df0;
 }
 .button {
   font-family: Karla, Roboto, sans-serif;
