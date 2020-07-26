@@ -66,7 +66,7 @@
                     >
 
                         <spam v-if="!user || !user.email">
-                         <b> Ingresa </b>
+                         Ingresa para ordenar
                         </spam>
                         
                         <spam v-else> 
@@ -75,16 +75,7 @@
                  
 
             </b-navbar-item>
-            <b-modal v-if="!user || !user.email" :active.sync="isModalActive">
- <div class="card">
-   <div class="card-content">
-     <b-button type="is-primary" expanded :class="[!loading ? '' : '']"
-                      :disabled="loading"
-                      @click="goToCheckout">Ingresa para ordenar</b-button>
-   </div>
- </div>
-</b-modal>
-
+           
             </template>
 
 
