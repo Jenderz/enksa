@@ -22,10 +22,10 @@ export default {
       progress: true,
             progressType: 'is-success',
             carousels: [
-                { title: 'Enksa', color: 'warning' },
+                { title: 'Enksa', color: 'primary' },
                 { title: 'Rápido', color: 'danger' },
                 { title: 'Sencillo', color: 'success' },
-                { title: '¡Quédate en casa!', color: 'info' }
+                { title: '¡Quédate en casa!', color: 'warning' }
             ]
     }
   }

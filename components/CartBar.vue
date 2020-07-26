@@ -4,7 +4,7 @@
       class="footer"
       v-if="getTotalCount!=0"
     >
-    <b-navbar class="is-primary" fixed-bottom v-bind:mobile-burger="false">
+    <b-navbar class="is-danger" fixed-bottom v-bind:mobile-burger="false">
       <template slot="brand" >
             <b-navbar-item>
               
@@ -14,7 +14,7 @@
             <template slot="brand">
 
                <b-navbar-item tag="router-link" :to="{ path: '/cart' }">
-               
+
                <img src="/carticon.svg" /> &nbsp; <b> Ver carrito </b>
 
             </b-navbar-item>

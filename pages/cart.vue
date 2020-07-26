@@ -51,7 +51,7 @@
       class="footer"
       v-if="!cartItems.length == 0"
     >
-    <b-navbar class="is-primary" fixed-bottom v-bind:mobile-burger="false">
+    <b-navbar class="is-info" fixed-bottom v-bind:mobile-burger="false">
       <template slot="brand" >
             <b-navbar-item>
               <h2 class="big">Cantidad total {{ getTotal | currency }} </h2>
