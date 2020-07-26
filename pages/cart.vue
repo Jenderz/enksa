@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="head">
-      <section class="hero is-primary">
+      <section class="hero is-info">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
@@ -64,7 +64,7 @@
                       :disabled="loading"
                       @click="goToCheckout"
                     >
-                      <div class="align_pickup">
+                      <div>
                         <spam v-if="!user || !user.email">
                          <b> Ingresa para ordenar </b>
                         </spam>
