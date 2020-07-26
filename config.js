@@ -12,8 +12,8 @@ module.exports = {
     short_name: 'Enksa',
     start_url: '/',
     display: 'standalone',
-    background_color: '#fff',
-    theme_color: '#555'
+    background_color: 'whitesmoke',
+    theme_color: 'whitesmoke'
   },
   head: {
     titleTemplate: 'Enksa | %s',
