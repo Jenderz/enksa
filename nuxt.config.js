@@ -3,11 +3,6 @@ import helmet from 'helmet'
 module.exports = {
   mode: 'spa',
   head: {
-    script: [
-      {
-        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQFKwVLvTw3-ovzOWm1UUAHeIVyDkW2t4&libraries=places'
-      }
-    ]
   },
   manifest,
   loading: '~/components/Loading.vue',
@@ -53,6 +48,7 @@ module.exports = {
       }
     }
   },
+  
 
   serverMiddleware: [
     helmet({
@@ -78,4 +74,5 @@ module.exports = {
     generate: false,
     exclude: ['/my/**']
   }
+  
 }

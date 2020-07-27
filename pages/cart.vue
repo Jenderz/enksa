@@ -48,13 +48,13 @@
                       @click="goToCheckout"
                     >
 
-                        <spam v-if="!user || !user.email">
+                        <h2 v-if="!user || !user.email">
                          Ingresa para ordenar
-                        </spam>
+                        </h2>
                         
-                        <spam v-else> 
+                        <h2 v-else> 
                           <b-icon icon="check"></b-icon>
-                          <b>Ir a la caja</b></spam>
+                          <b>Ir a la caja</b></h2>
                  
 
             </b-navbar-item>

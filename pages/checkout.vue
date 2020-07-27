@@ -40,7 +40,7 @@
 
         <b-field>
     
-      <b-input id="searchTextField" type="text" placeholder="Punto de referencia">
+      <b-input type="text" placeholder="Punto de referencia">
       </b-input>
     
   </b-field>
@@ -91,17 +91,6 @@
 import { mapState, mapGetters, mapActions } from 'vuex'
 const Products = () => import('~/components/Products')
 export default {
-  mounted: function () {
-		var defaultBounds = new google.maps.LatLngBounds(
-		new google.maps.LatLng(-73.138744, 10.1050619),
-		new google.maps.LatLng(-73.138744, 10.105069));
-		var input = document.getElementById('searchTextField');
-		var options = {
-			bounds: defaultBounds,
-			types: ['establishment']
-		};
-		this.autocomplete = new google.maps.places.Autocomplete(input, options);
-	},
   props: ['products'],
   async asyncData({ store }) {
     let profile = {}
