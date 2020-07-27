@@ -24,7 +24,7 @@
           <br>
 
         <b-button class="is-danger" @click="go('/')">
-                              <img src="/backarrow.svg" /> Regresar al inicio
+                              <img src="/backarrow.svg" /> <b>Regresar al inicio</b>
 
                           </b-button>
       </center>

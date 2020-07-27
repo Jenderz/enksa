@@ -2,7 +2,13 @@ import { ANALYTICS_TRACKING_ID, head, manifest } from './config'
 import helmet from 'helmet'
 module.exports = {
   mode: 'spa',
-  head,
+  head: {
+    script: [
+      {
+        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCQFKwVLvTw3-ovzOWm1UUAHeIVyDkW2t4&libraries=places'
+      }
+    ]
+  },
   manifest,
   loading: '~/components/Loading.vue',
   css: ['~assets/styles/reset.css', '~assets/styles/transitions.css'],

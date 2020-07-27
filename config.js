@@ -5,6 +5,8 @@ module.exports = {
   projectId: 'delivery-e7702',
   authDomain: 'delivery-e7702.firebaseapp.com',
   ANALYTICS_TRACKING_ID: '',
+  
+
   clearCart: true, // Whether to clear the cart after order is placed. Useful while testing
   currency: { symbol: '$', code: 'USD' },
   manifest: {
@@ -14,6 +16,7 @@ module.exports = {
     display: 'standalone',
     background_color: '#ff3860',
     theme_color: '#ff3860'
+    
   },
   head: {
     titleTemplate: 'Enksa | %s',
@@ -59,7 +62,7 @@ module.exports = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://foodfire.info'
+        content: 'https://enksa.netlify.app'
       }
     ],
     noscript: [
@@ -69,5 +72,6 @@ module.exports = {
     ],
     htmlAttrs: { lang: 'es' },
     __dangerouslyDisableSanitizers: ['script']
+    
   }
 }

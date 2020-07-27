@@ -1,5 +1,6 @@
 <template>
-  <div v-if="profile">
+
+ <div v-if="profile">
      <div class="card">
          <div class="card-content">
      <div class="img1">
@@ -32,6 +33,7 @@
         </b-field>
           <b-field>
             <b-input placeholder="Teléfono"
+                v-model="email"
                 type="phone"
                 icon="phone"
             >
@@ -40,7 +42,7 @@
 
         <b-field>
     
-      <b-input id="searchTextField" type="text" placeholder="Punto de referencia">
+      <b-input id="searchTextField" type="text" placeholder="testing">
       </b-input>
     
   </b-field>
@@ -49,44 +51,9 @@
     </section>
     </div>
 </div>
-    <div class="footer">
-      <a v-if="!cartItems.length == 0">
-        <div class="cart-total footer">
-          <div class="container2 ">
-            <div class="card shadow-lg2 w100">
-              <div>
-                <div class="is-mobile">
-                  <div class="align">
-                    <div class="amount_align">
-                      <p class="gray">Cantidad total</p>
-                    </div>
-                    <div>
-                      <h2>{{ getTotal | currency }}</h2>
-                    </div>
-                  </div>
-                  <div>
-                    <button
-                      class="button"
-                      :class="disable"
-                      :disabled="getTotal == 0 || loading"
-                      @click="placeOrder()"
-                    >
-                      <span :class="fadeIn">{{ text }}</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="is-mobile">
-                  <p class="green">Permítanos 45 minutos para la entrega.</p>
-                </div>
-                <div class="cart-total-after"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
+ </div>
 </template>
+
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
 const Products = () => import('~/components/Products')

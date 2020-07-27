@@ -8,6 +8,9 @@
 const Header = () => import('~/components/Header')
 
 export default {
+  
   components: { Header }
 }
+
+
 </script>
