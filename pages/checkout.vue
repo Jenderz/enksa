@@ -16,7 +16,8 @@
 <div class="card">
     <div class="card-content">
     <section>
-        <h3 class="subtitle">Completa los datos</h3>
+
+             <h3>Completa los datos</h3>
 
         <b-field>
             <b-input placeholder="Correo lectrónico"
@@ -37,10 +38,26 @@
             >
             </b-input>
         </b-field>
-
-        <b-field>
+<b-field label="Dirección de entrega">
     
-      <b-input type="text" placeholder="Punto de referencia">
+      <b-input 
+      type="text" 
+      placeholder="Calle/Avenida"
+      icon="map-marker">
+      </b-input>
+</b-field>
+      <b-field>
+     <b-input 
+      type="text" 
+      placeholder="Calle/Avenida"
+      icon="map-marker">
+      </b-input>
+</b-field>
+    <b-field>
+       <b-input 
+      type="text" 
+      placeholder="Ciudad"
+      icon="city">
       </b-input>
     
   </b-field>
