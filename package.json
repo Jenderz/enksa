@@ -1,8 +1,8 @@
 {
-  "name": "foodfire",
+  "name": "enksa",
   "version": "1.4.0",
-  "description": "Ready to use NuxtJS + Firebase Shopping APP for Food Ordering",
-  "author": "Swadesh Behera <swadesh@litekart.in>",
+  "description": "Entrega inmediata, quédate en casa.",
+  "author": "Jender Zavala <Jenderzavala@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {

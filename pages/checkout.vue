@@ -7,19 +7,16 @@
  </div>
        <div class="has-text-centered">
         <label for="login"></label>
-        <h2 v-if="profile">
+        <b v-if="profile">
           {{ profile.name }}
-        </h2>
+        </b>
         </div>
         </div>
         </div>
 <div class="card">
     <div class="card-content">
     <section>
-
-             <h3>Completa los datos</h3>
-
-        <b-field>
+        <b-field label="Datos personales">
             <b-input placeholder="Correo lectrónico"
                 v-model="profile.email"
                 type="email"
@@ -29,17 +26,41 @@
           v-if="profile"
           disabled>
             </b-input>
-
         </b-field>
-          <b-field>
-            <b-input placeholder="Teléfono"
-                type="phone"
-                icon="phone"
+         <b-field>
+            <b-input placeholder="A nombre de"
+                type="text"
+                icon="account"
             >
             </b-input>
         </b-field>
-<b-field label="Dirección de entrega">
-    
+
+          <b-field>
+            <b-input placeholder="Teléfono"
+                type="tel"
+                icon="phone"
+                v-model="profile.phone"
+            >
+            </b-input>
+        </b-field>
+        <b-field>
+            <b-input placeholder="DNI/Cedula"
+                type="number"
+                icon="card-account-details-outline"
+                v-model="profile.dni"
+            >
+            </b-input>
+        </b-field>
+
+        
+    <b-field label="Datos de entrega">
+       <b-input 
+      type="text" 
+      placeholder="Ciudad"
+      icon="city">
+      </b-input>
+  </b-field>
+  <b-field>
       <b-input 
       type="text" 
       placeholder="Calle/Avenida"
@@ -49,19 +70,11 @@
       <b-field>
      <b-input 
       type="text" 
-      placeholder="Calle/Avenida"
-      icon="map-marker">
+      placeholder="Urbanización/Sector"
+      icon="home-city-outline"
+      v-model="profile.address">
       </b-input>
 </b-field>
-    <b-field>
-       <b-input 
-      type="text" 
-      placeholder="Ciudad"
-      icon="city">
-      </b-input>
-    
-  </b-field>
-
 
     </section>
     </div>
