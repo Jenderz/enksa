@@ -47,7 +47,7 @@
             <b-input placeholder="DNI/Cedula"
                 type="number"
                 icon="card-account-details-outline"
-                v-model="profile.dni"
+                v-model="newDNI"
             >
             </b-input>
         </b-field>
@@ -64,7 +64,9 @@
       <b-input 
       type="text" 
       placeholder="Calle/Avenida"
-      icon="map-marker">
+      icon="map-marker"
+      v-model="profile.calle">
+      
       </b-input>
 </b-field>
       <b-field>
@@ -77,6 +79,17 @@
 </b-field>
 
     </section>
+
+
+<form>
+      <label>
+        New Todo:
+        <input v-model="newTodo" type="text"/>
+        <button type="submit">Add</button>
+      </label>
+    </form>
+
+
     </div>
 </div>
     <div class="footer">
@@ -100,6 +113,7 @@
                       :class="disable"
                       :disabled="getTotal == 0 || loading"
                       @click="placeOrder()"
+                      @click.prevent="addTodo()"
                     >
                       <span :class="fadeIn">{{ text }}</span>
                     </button>
@@ -118,6 +132,7 @@
   </div>
 </template>
 <script>
+import { clientesCollection } from '~/service/firebase'
 import { mapState, mapGetters, mapActions } from 'vuex'
 const Products = () => import('~/components/Products')
 export default {
@@ -129,13 +144,16 @@ export default {
     profile.dob = profile.dob || {}
     profile.state = profile.state || {}
     return { profile }
+    
   },
   data() {
     return {
       loading: false,
       text: 'Place order',
       fadeIn: '',
-      disable: 'disable'
+      disable: 'disable',
+      newTodo: '',
+      newDNI: ''
     }
   },
   components: { Products },
@@ -154,10 +172,12 @@ export default {
     })
   },
   methods: {
+
+
     ...mapActions({
       checkout: 'cart/checkout',
       googleSignIn: 'auth/googleSignIn',
-      addToCart: 'cart/addToCart'
+      addToCart: 'cart/addToCart',
     }),
     async placeOrder() {
       if (this.loading) return
@@ -182,9 +202,28 @@ export default {
           this.loading = false
         }
       } else {
-        this.checkout({ address: this.profile.address })
+        this.checkout({ address: this.profile.address, calle: this.profile.calle  })
       }
+      
+    },
+    addTodo() {
+      clientesCollection.add({
+        text: this.newTodo,
+        number: this.newDNI,
+        completed: false,
+        createdAt: new Date()
+      })
+      .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function(error) {
+        console.error("Error adding document: ", error);
+      });
+      this.newTodo = '';
+      this.newDNI = '';
     }
+    
+           
   }
 }
 </script>

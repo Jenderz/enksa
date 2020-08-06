@@ -9,3 +9,4 @@ let db = firebase.firestore()
 
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 export { db, firebase, googleAuthProvider }
+export const clientesCollection = db.collection('clientes');

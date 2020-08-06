@@ -1,42 +1,39 @@
 <template>
-  <div>
-    <Loading :active="!settings || !settings[0]" />
-    <div v-if="settings[0]">
-      <Hero :closed="settings[0].closed" />
-      <Info />
-      <Skeleton v-if="!products" />
-      <Products :products="products" :showcart="true" />
-      <Overlay :closed="settings[0].closed" />
-      <cart-bar />
-    </div>
-  </div>
+<div>
+      <b-modal :active.sync="isModalActive" has-modal-card :can-cancel="false">
+ <div class="modal-card" style="width: auto">
+   <header class="modal-card-head">
+     <h1 class="modal-card-title has-text-centered" >Bienvenidos a <b>Enksa</b></h1>
+                </header>
+                
+     <section class="modal-card-body has-text-centered">
+       <h2> Selecciona la ubicación más cercana </h2>
+       <br>
+       <b-button type="is-danger" rounded expanded icon-left="map-marker" tag="a"
+                href="https://enksa.netlify.app/lc/SanFrancisco" >San Francisco</b-button>
+       <br>
+       <b-button type="is-danger" rounded expanded icon-left="map-marker" tag="a"
+                href="https://enksa.netlify.app/lc/maracaibo">Maracaibo</b-button>
+                  
+                </section>
+ 
+   </div>
+   </b-modal>
+ </div>
+
+
 </template>
 <script>
-const Loading = () => import('~/components/Loading')
-const Skeleton = () => import('~/components/Skeleton')
-const Overlay = () => import('~/components/Overlay')
-const Products = () => import('~/components/Products')
-const Info = () => import('~/components/Info')
-const Hero = () => import('~/components/Hero')
-const CartBar = () => import('~/components/CartBar')
-import { db } from '~/service/firebase'
 export default {
   data() {
     return {
-      loading: false,
-      closed: true,
       settings: [],
-      products: []
+      isModalActive: true
     }
   },
-  firestore() {
-    return {
-      settings: db.collection('settings'),
-      products: db.collection('products')
-    }
-  },
+  
   methods: {},
   async created() {},
-  components: { Loading, Skeleton, Overlay, Products, Info, Hero, CartBar }
+  components: { }
 }
 </script>
