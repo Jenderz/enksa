@@ -3,7 +3,7 @@
       <b-modal :active.sync="isModalActive" has-modal-card :can-cancel="false">
  <div class="modal-card" style="width: auto">
    <header class="modal-card-head">
-     <h1 class="modal-card-title has-text-centered" >Bienvenidos a <b>Enksa</b></h1>
+     <h1 class="modal-card-title has-text-centered" >Bienvenido a <b>Enksa</b></h1>
                 </header>
                 
      <section class="modal-card-body has-text-centered">

@@ -31,6 +31,7 @@
             <b-input placeholder="A nombre de"
                 type="text"
                 icon="account"
+                v-model="newName"
             >
             </b-input>
         </b-field>
@@ -39,7 +40,7 @@
             <b-input placeholder="Teléfono"
                 type="tel"
                 icon="phone"
-                v-model="profile.phone"
+                v-model="newPhone"
             >
             </b-input>
         </b-field>
@@ -57,7 +58,8 @@
        <b-input 
       type="text" 
       placeholder="Ciudad"
-      icon="city">
+      icon="city"
+      v-model="newCity">
       </b-input>
   </b-field>
   <b-field>
@@ -65,7 +67,7 @@
       type="text" 
       placeholder="Calle/Avenida"
       icon="map-marker"
-      v-model="profile.calle">
+      v-model="newCalle">
       
       </b-input>
 </b-field>
@@ -74,22 +76,20 @@
       type="text" 
       placeholder="Urbanización/Sector"
       icon="home-city-outline"
+      v-model="newSector">
+      </b-input>
+</b-field>
+
+<b-field>
+     <b-input 
+      type="text" 
+      placeholder="Punto de referencia"
+      icon="map-marker"
       v-model="profile.address">
       </b-input>
 </b-field>
 
     </section>
-
-
-<form>
-      <label>
-        New Todo:
-        <input v-model="newTodo" type="text"/>
-        <button type="submit">Add</button>
-      </label>
-    </form>
-
-
     </div>
 </div>
     <div class="footer">
@@ -152,7 +152,11 @@ export default {
       text: 'Place order',
       fadeIn: '',
       disable: 'disable',
-      newTodo: '',
+      newCity: '',
+      newCalle: '',
+      newSector: '',
+      newPhone: '',
+      newName: '',
       newDNI: ''
     }
   },
@@ -202,14 +206,18 @@ export default {
           this.loading = false
         }
       } else {
-        this.checkout({ address: this.profile.address, calle: this.profile.calle  })
+        this.checkout({ address: this.profile.address })
       }
       
     },
     addTodo() {
       clientesCollection.add({
-        text: this.newTodo,
         number: this.newDNI,
+        phone: this.newPhone,
+        city: this.newCity,
+        calle: this.newCalle,
+        sector: this.newSector,
+        sector: this.newName,
         completed: false,
         createdAt: new Date()
       })
@@ -219,8 +227,13 @@ export default {
       .catch(function(error) {
         console.error("Error adding document: ", error);
       });
-      this.newTodo = '';
       this.newDNI = '';
+      this.newPhone = '';
+      this.newCity = '';
+      this.newCalle = '';
+      this.newSector = '';
+      this.newRef = '';
+      this.newName = '';
     }
     
            
