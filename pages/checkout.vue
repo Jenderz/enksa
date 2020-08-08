@@ -92,44 +92,41 @@
     </section>
     </div>
 </div>
-    <div class="footer">
+
+
+
+<div class="footer">
       <a v-if="!cartItems.length == 0">
-        <div class="cart-total footer">
-          <div class="container2 ">
-            <div class="card shadow-lg2 w100">
-              <div>
-                <div class="is-mobile">
-                  <div class="align">
-                    <div class="amount_align">
-                      <p class="gray">Cantidad total</p>
-                    </div>
-                    <div>
-                      <h2>{{ getTotal | currency }}</h2>
-                    </div>
-                  </div>
-                  <div>
-                    <button
-                      class="button"
+<b-navbar class="is-danger" fixed-bottom v-bind:mobile-burger="false">
+      <template slot="brand" >
+            <b-navbar-item>
+              <h2 class="big">Cantidad total {{ getTotal | currency }} </h2>
+            </b-navbar-item>
+            </template>
+            <template slot="brand">
+
+               <b-navbar-item
+                      class="is-danger" expanded
                       :class="disable"
                       :disabled="getTotal == 0 || loading"
                       @click="placeOrder()"
                       @click.prevent="addTodo()"
                     >
-                      <span :class="fadeIn">{{ text }}</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="is-mobile">
-                  <p class="green">Permítanos 45 minutos para la entrega.</p>
-                </div>
-                <div class="cart-total-after"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
+
+                        <span :class="fadeIn">{{ text }}</span>
+                        
+            
+
+            </b-navbar-item>
+           
+            </template>
+
+
+      </b-navbar>
+
+</a>
     </div>
-  </div>
+</div>
 </template>
 <script>
 import { clientesCollection } from '~/service/firebase'
@@ -149,7 +146,7 @@ export default {
   data() {
     return {
       loading: false,
-      text: 'Place order',
+      text: 'Realizar pedido',
       fadeIn: '',
       disable: 'disable',
       newCity: '',
@@ -191,10 +188,10 @@ export default {
         return
       }
       if (!this.profile.address || this.profile.address == '') {
-        alert('Address is mandatory')
+        alert('El punto de referencia es obligatorio')
         return
       }
-      this.text = 'Please Wait. . .'
+      this.text = 'Por favor espere. . .'
       this.fadeIn = 'fadeIn'
       this.disable = true
       this.loading = true
