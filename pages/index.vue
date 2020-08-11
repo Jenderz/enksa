@@ -10,7 +10,7 @@
        <h2> Selecciona la ubicación más cercana </h2>
        <br>
        <b-button type="is-danger" rounded expanded icon-left="map-marker" tag="a"
-                href="https://enksa.netlify.app/lc/SanFrancisco" >San Francisco</b-button>
+                href="https://enksa.netlify.app/lc/SanFco" >San Francisco</b-button>
        <br>
        <b-button type="is-danger" rounded expanded icon-left="map-marker" tag="a"
                 href="https://enksa.netlify.app/lc/maracaibo">Maracaibo</b-button>
