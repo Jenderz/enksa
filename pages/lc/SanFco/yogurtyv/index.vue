@@ -5,7 +5,9 @@
       <Hero :closed="settings[0].closed" />
       <Info />
       <Skeleton v-if="!products" />
+
       <Products :products="products" :showcart="true" />
+
       <Overlay :closed="settings[0].closed" />
       <cart-bar />
     </div>

@@ -4,28 +4,7 @@
       <section class="message-body">
         <div>
           <div class="media-content">
-            <div class="webrow">
-              <div class="columns is-mobile">
-                <div class="column">
-                  <p class="grey">Tiempo</p>
-                  <div>45 minutos</div>
-                </div>
-                <div class="column pl-10">
-                  <p class="grey">Envío </p>
-                  <div class="w-132"> {{ 0 | currency }}</div>
-                </div>
-              </div>
-              <div class="columns is-mobile">
-                <div class="column">
-                  <p class="grey">Horas de envío</p>
-                  <div class="w-132">7:30AM - 11:30AM</div>
-                </div>
-                <div class="column pl-10">
-                  <p class="grey">Orden mínima</p>
-                  <div>{{ 0 | currency }}</div>
-                </div>
-              </div>
-            </div>
+               
             <div class="green">
               <center>
                 <b>En línea</b>
