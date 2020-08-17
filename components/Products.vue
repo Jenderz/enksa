@@ -58,11 +58,18 @@
       </div>
     </div>
     <b-modal :active.sync="isModalActive">
- <div class="card" :class="{ border: ix != 0 }"
+      <div class="card" :class="{ border: ix != 0 }"
       v-for="(p, ix) in products"
       :key="p['.key']">
    <div class="card-content">
-    <img img v-lazy="p.img" alt="" />
+    <b-carousel>
+        <b-carousel-item>
+                 <img img v-lazy="p.img" alt="" />
+        </b-carousel-item>
+        <b-carousel-item>
+                 <img img v-lazy="p.img1" alt="" />
+        </b-carousel-item>
+        </b-carousel>
    </div>
  </div>
 </b-modal>
