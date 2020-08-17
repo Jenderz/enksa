@@ -7,7 +7,7 @@
       v-for="(p, ix) in products"
       :key="p['.key']"
     >
-      <div class="image">
+      <div class="image" @click="isModalActive=true">
         <img v-lazy="p.img" alt="" />
       </div>
       <div class="content">
@@ -33,7 +33,7 @@
       :key="p['.key'] + 'x'"
     >
       <div class="webcolumn">
-        <div class="image">
+        <div class="image" @click="isModalActive=true">
           <img img v-lazy="p.img" alt="" />
         </div>
         <div class="content">
@@ -57,14 +57,30 @@
         </div>
       </div>
     </div>
+    <b-modal :active.sync="isModalActive">
+ <div class="card" :class="{ border: ix != 0 }"
+      v-for="(p, ix) in products"
+      :key="p['.key']">
+   <div class="card-content">
+    <img img v-lazy="p.img" alt="" />
+   </div>
+ </div>
+</b-modal>
   </div>
+  
 </template>
 <script>
 import { mapState, mapGetters, mapActions, mapMutations } from 'vuex'
 const CartButtons = () => import('~/components/CartButtons')
 
 export default {
+  data() {
+  return {
+    isModalActive: false
+  };
+},
   props: ['products', 'showcart'],
+  
 
   components: { CartButtons },
   methods: {
