@@ -37,10 +37,10 @@ div#wave .blue {
   background: #7957d5;
 }
 div#wave .green {
-  background: #ff3860;
+  background: #23d160;
 }
 div#wave .red {
-  background: #23d160;
+  background: #ff3860; 
 }
 div#wave {
   position: fixed;

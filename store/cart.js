@@ -122,7 +122,7 @@ const actions = {
       address: address || '',
       email,
       items: items || [],
-      status: 'Pending',
+      status: 'Pendiente',
       amount: {
         total: getters.getTotal,
         qty: getters.getTotalCount,
@@ -182,7 +182,7 @@ const mutations = {
     this.$cookies.set('ArialShop_items', state.items)
     state.skuArray = state.items.map(a => a._id)
     if (qty > 0) {
-      let msg = 'Artículo al carrito'
+      let msg = 'Artículo añadido al carrito'
       this.$toast.success(msg).goAway(2000)
     }
   }

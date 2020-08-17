@@ -57,6 +57,7 @@
     
  </b-navbar>
 </template>
+
 <script>
 import { mapActions } from 'vuex'
 
@@ -83,13 +84,8 @@ export default {
       return (this.$store.state.auth || {}).user || null
     }
   }
+  
 }
-
-
-
-</script>
-
-
 
 </script>
 <style >

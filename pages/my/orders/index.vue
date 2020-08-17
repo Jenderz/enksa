@@ -1,11 +1,10 @@
 <template>
-  <div>
+  <div v-if="!!user">
     <center class="title">
       <strong class="font">Mi historial de ordenes</strong>
     </center>
-    <Loading :active="!orders || !orders[0]" />
-    <div
-      v-if="!!user"
+    <Loading  :active="!orders || !orders[0]" />
+    <div 
       v-for="o in orders"
       :key="o._id"
       :title="`${o.name} => ${o.address}`"

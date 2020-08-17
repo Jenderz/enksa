@@ -24,12 +24,12 @@
               <div
                 class="circle"
                 v-bind:class="{
-                  active1: o.status == 'PENDING',
-                  Pending: o.status == 'Pending',
+                  active1: o.status == 'PENDIENTE',
+                  Pending: o.status == 'Pendiente',
                 }"
-                native-value="Pending"
+                native-value="Pendiente"
                 @input="changeStatus(o)"
-                @click="update('Pending')"
+                @click="update('Pendiente')"
               >
                 <span>
                   <img class="svgsize" src="/forwardarrow.svg" />
@@ -37,7 +37,7 @@
                 <div>
                   <p
                     class="fntclr"
-                    v-bind:class="{ Pending: o.status == 'Pending' }"
+                    v-bind:class="{ Pending: o.status == 'Pendiente' }"
                   >
                     Pendiente
                   </p>
@@ -46,13 +46,13 @@
               <div
                 class="circle"
                 v-bind:class="{
-                  active2: o.status == 'SHIPPED',
-                  Shipped: o.status == 'Shipped',
+                  active2: o.status == 'ENVIADA',
+                  Shipped: o.status == 'Enviada',
                 }"
-                native-value="Shipped"
+                native-value="Enviado"
                 type="is-warning"
                 @input="changeStatus(o)"
-                @click="update('Shipped')"
+                @click="update('Enviado')"
               >
                 <span>
                   <img class="svgsize" src="/truckwhite.svg" />
@@ -60,7 +60,7 @@
                 <div>
                   <p
                     class="fntclr"
-                    v-bind:class="{ Shipped: o.status == 'Shipped' }"
+                    v-bind:class="{ Shipped: o.status == 'Enviada' }"
                   >
                     Enviada
                   </p>
@@ -69,10 +69,10 @@
               <div
                 class="circle"
                 v-bind:class="{
-                  active3: o.status == 'DELIVERED',
-                  Delivered: o.status == 'Delivered',
+                  active3: o.status == 'ENTREGADA',
+                  Delivered: o.status == 'Entregada',
                 }"
-                native-value="Delivered"
+                native-value="Entregada"
                 type="is-success"
                 @input="changeStatus(o)"
                 @click="update('Delivered')"
@@ -83,7 +83,7 @@
                 <div>
                   <p
                     class="fntclr2"
-                    v-bind:class="{ Delivered: o.status == 'Delivered' }"
+                    v-bind:class="{ Delivered: o.status == 'Entregada' }"
                   >
                     Entregada
                   </p>
@@ -92,13 +92,13 @@
               <div
                 class="circle"
                 v-bind:class="{
-                  active4: o.status == 'CANCELLED',
-                  Cancelled: o.status == 'Cancelled',
+                  active4: o.status == 'CANCELADA',
+                  Cancelled: o.status == 'Cancelada',
                 }"
-                native-value="Cancelled"
+                native-value="Cancelada"
                 type="is-danger"
                 @input="changeStatus(o)"
-                @click="update('Cancelled')"
+                @click="update('Cancelada')"
               >
                 <span>
                   <img class="svgsize" src="/backcross.svg" />
@@ -106,7 +106,7 @@
                 <div>
                   <p
                     class="fntclr3"
-                    v-bind:class="{ Cancelled: o.status == 'Cancelled' }"
+                    v-bind:class="{ Cancelled: o.status == 'Cancelada' }"
                   >
                     Cancelada
                   </p>
@@ -172,7 +172,7 @@ const Loading = () => import('~/components/Loading')
 
 import { db } from '~/service/firebase'
 export default {
-  props: ['products', 'status', 'PENDING', 'DELIVERED', 'SHIPPED', 'CANCELLED'],
+  props: ['products', 'status', 'PENDIENTE', 'ENTREGADA', 'ENVIADA', 'CANCELADA'],
   components: { Loading },
   data() {
     return {}
