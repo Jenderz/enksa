@@ -25,6 +25,7 @@ export default {
                 { title: 'Enksa', color: 'primary' },
                 { title: 'Rápido', color: 'danger' },
                 { title: 'Sencillo', color: 'success' },
+                { title: 'Seguro', color: 'info' },
                 { title: '¡Quédate en casa!', color: 'warning' }
             ]
     }

@@ -5,7 +5,8 @@
       <Hero :closed="settings[0].closed" />
       <Info />
       <Skeleton v-if="!products" />
-
+<section>
+    </section>
       <Products :products="products" :showcart="true" />
 
       <Overlay :closed="settings[0].closed" />
@@ -25,6 +26,10 @@ import { db } from '~/service/firebase'
 export default {
   data() {
     return {
+        data: [
+          
+          
+        ],
       loading: false,
       closed: true,
       settings: [],
@@ -37,8 +42,11 @@ export default {
       products: db.collection('products1')
     }
   },
+
   methods: {},
   async created() {},
   components: { Loading, Skeleton, Overlay, Products, Info, Hero, CartBar }
+
+
 }
 </script>
