@@ -77,7 +77,7 @@ module.exports = {
 
  pwa: {
   icon: {
-    purpose: 'maskable'
+    purpose: ['any','maskable']
   }
 }
 }
