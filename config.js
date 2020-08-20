@@ -16,11 +16,6 @@ module.exports = {
     display: 'standalone',
     background_color: '#ff3860',
     theme_color: '#ff3860',
-    icon: {
-        purpose: 'maskable'
-      }
-    
-    
   },
   head: {
     titleTemplate: 'Enksa | %s',
