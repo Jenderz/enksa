@@ -15,7 +15,11 @@ module.exports = {
     start_url: '/',
     display: 'standalone',
     background_color: '#ff3860',
-    theme_color: '#ff3860'
+    theme_color: '#ff3860',
+    icon: {
+        purpose: 'maskable'
+      }
+    
     
   },
   head: {

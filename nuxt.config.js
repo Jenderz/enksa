@@ -73,11 +73,6 @@ module.exports = {
     gzip: true,
     generate: false,
     exclude: ['/my/**']
-  },
-
- pwa: {
-  icon: {
-    purpose: ['any','maskable']
   }
-}
+
 }
