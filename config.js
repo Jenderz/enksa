@@ -16,6 +16,15 @@ module.exports = {
     display: 'standalone',
     background_color: '#ff3860',
     theme_color: '#ff3860',
+    icons: [
+      {
+        "src": "/icon.png",
+        "sizes": "196x196",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+
   },
   head: {
     titleTemplate: 'Enksa | %s',
