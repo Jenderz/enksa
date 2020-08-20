@@ -1,5 +1,7 @@
 <template>
+
 <div>
+
       <b-modal :active.sync="isModalActive" has-modal-card :can-cancel="false">
  <div class="modal-card" style="width: auto">
    <header class="modal-card-head">
